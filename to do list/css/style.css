@@ -1,0 +1,135 @@
+body {
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.container {
+  margin: 0 auto;
+  height: 879px;
+  padding-top: 50px;
+}
+
+.todo_list {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 40px;
+  background-color: #468fe2;
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 15px #074b83be;
+  box-shadow: 0 0 15px #074b83be;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #468fe2;
+  font-size: 30px;
+}
+
+.create_new_todo {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 325px 75px;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 290px;
+  padding: 10px;
+  outline: none;
+  background: #468fe2;
+  border: 1px solid #85FFBD;
+  color: #85FFBD;
+}
+
+input[type=text]::placeholder {
+  color: #85FFBD;
+}
+
+button {
+  margin-top: 10px;
+  width: 75px;
+  padding: 10px;
+  margin: 0;
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  border: none;
+  font-weight: bold;
+  color: #468fe2;
+  outline: none;
+  cursor: pointer;
+}
+
+.all-todo {
+  padding-left: 0;
+}
+
+.all-todo li {
+  padding: 1em;
+  list-style-type: none;
+}
+
+.all-todo li:not(:last-child) {
+  border-bottom: 1px solid #85FFBD;
+}
+
+input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+
+input[type=checkbox], label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+input[type=checkbox]+label:before {
+  content: '';
+  background: #1BA39C;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+input[type=checkbox]:checked+label:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 5px;
+  border: solid blue;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  border-radius: 0;
+  margin: 0 15px 5px 5px;
+}
+
+label {
+  color: #85FFBD;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.important {
+  font-weight: bold;
+  color: #A40E11;
+}
